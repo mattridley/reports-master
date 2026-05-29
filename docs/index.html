@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reports Master Documentation</title>
+    <meta
+      name="description"
+      content="Reports Master is a local-first desktop app for teachers drafting end-of-year reports from classes, subjects, scores, and statement banks."
+    />
+    <link rel="icon" href="assets/icon.ico" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Reports Master home">
+          <img src="assets/icon.ico" alt="" />
+          <span>Reports Master</span>
+        </a>
+        <div>
+          <a href="#getting-started">Getting Started</a>
+          <a href="#documentation">Documentation</a>
+          <a href="#csv">CSV</a>
+          <a href="https://github.com/mattridley/reports-master/releases">Releases</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Local-first teacher reporting</p>
+          <h1>Draft end-of-year reports without losing the teacher voice.</h1>
+          <p>
+            Reports Master helps teachers turn classes, subjects, students, scores, and statement banks into editable
+            report drafts. Data is stored locally by default, with optional AI generation only when enabled by the teacher.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="https://github.com/mattridley/reports-master/releases">Download release</a>
+            <a class="button secondary" href="#getting-started">Read the guide</a>
+          </div>
+        </div>
+
+        <div class="app-preview" aria-label="Reports Master interface preview">
+          <div class="preview-sidebar">
+            <span></span>
+            <b>Classes</b>
+            <b>Students</b>
+            <b>Statements</b>
+            <b>Drafts</b>
+          </div>
+          <div class="preview-main">
+            <div class="preview-header">
+              <span>Year 5 - 5R</span>
+              <strong>Statement bank</strong>
+            </div>
+            <div class="preview-row missing">
+              <span>Maths</span>
+              <span>Effort</span>
+              <em>Missing statement text</em>
+            </div>
+            <div class="preview-row">
+              <span>English</span>
+              <span>Attainment</span>
+              <p>{name} {has_have} made secure progress.</p>
+            </div>
+            <div class="preview-draft">
+              <strong>Ava Patel</strong>
+              <p>Ava has shown consistent effort and is working securely at the expected level.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="band" id="getting-started">
+        <div class="section-heading">
+          <p class="eyebrow">Getting started</p>
+          <h2>From blank workspace to report drafts</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3>Create subjects and classes</h3>
+            <p>
+              Add the subjects taught in school, then create classes with a year group and class name. A class can have
+              many subjects, and the same subject can be taught across many classes.
+            </p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Add teachers and students</h3>
+            <p>
+              Assign teachers per class subject, with a bulk option for primary class teachers and per-subject overrides
+              for specialist lessons. Students are assigned to classes and receive scores per subject.
+            </p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Complete the statement bank</h3>
+            <p>
+              Reports Master automatically creates every required statement row for your class subjects and score labels.
+              Fill in the missing text once, then reuse it across matching students.
+            </p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Generate, edit, export</h3>
+            <p>
+              Generate rule-based or optional AI-assisted drafts, review and personalise the text, then export final
+              reports as CSV or one-page-per-student PDF output.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band split" id="documentation">
+        <div class="section-heading">
+          <p class="eyebrow">Documentation</p>
+          <h2>Core workflows</h2>
+        </div>
+        <div class="docs-grid">
+          <article>
+            <h3>Classes and subjects</h3>
+            <p>
+              Use the Subjects page as the master list. On the Classes page, choose subjects from that list rather than
+              typing free text. This keeps statement generation and student scoring aligned.
+            </p>
+          </article>
+          <article>
+            <h3>Teacher assignment</h3>
+            <p>
+              In class edit mode, use <strong>Set all subjects to</strong> to fill every subject with a class teacher,
+              then override individual subjects such as PE, Computing, or Music.
+            </p>
+          </article>
+          <article>
+            <h3>Student scoring</h3>
+            <p>
+              Students belong to a class. Their effort and attainment scores are stored per subject, so primary and
+              secondary class structures can use the same reporting flow.
+            </p>
+          </article>
+          <article>
+            <h3>Statement placeholders</h3>
+            <p>
+              Statement text can include pronoun and grammar placeholders: <code>{name}</code>, <code>{they}</code>,
+              <code>{them}</code>, <code>{their}</code>, <code>{is_are}</code>, <code>{has_have}</code>,
+              <code>{was_were}</code>, and <code>{s}</code>.
+            </p>
+          </article>
+          <article>
+            <h3>Draft protection</h3>
+            <p>
+              Generated drafts are editable. Teacher edits are preserved, and generation skips edited drafts unless a
+              later workflow explicitly replaces them.
+            </p>
+          </article>
+          <article>
+            <h3>Privacy and AI</h3>
+            <p>
+              Reports Master is local-first. Optional AI generation only runs after an API key is saved and the teacher
+              chooses AI generation for a class or all classes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="csv">
+        <div class="section-heading">
+          <p class="eyebrow">Import and export</p>
+          <h2>CSV mapping and output</h2>
+        </div>
+        <div class="csv-grid">
+          <article>
+            <h3>Flexible imports</h3>
+            <p>
+              CSV imports read the header row and let teachers map columns to app fields. Obvious column names are
+              matched automatically before validation and import.
+            </p>
+            <pre><code>year_group,subjects,class_name
+Year 5,"English, Maths, Science",5R</code></pre>
+          </article>
+          <article>
+            <h3>Students</h3>
+            <p>
+              Student imports support names, pronouns, class, subject, effort score, and attainment score. Scores are
+              validated against the current score labels.
+            </p>
+            <pre><code>class,subject,first_name,last_name,pronoun_set,effort_score,attainment_score
+7A,English,Ava,Patel,she-her,1,Expected</code></pre>
+          </article>
+          <article>
+            <h3>Statements</h3>
+            <p>
+              Statement imports update matching auto-created statement rows by year group, subject, score type, and
+              score label.
+            </p>
+            <pre><code>year_group,subject,score_type,score_label,statement_text
+Year 7,English,effort,1,{name} {has_have} shown excellent effort.</code></pre>
+          </article>
+          <article>
+            <h3>Exports</h3>
+            <p>
+              CSV export includes one row per student report. PDF export creates one page per student with all subject
+              report text included.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band release">
+        <div>
+          <p class="eyebrow">Desktop builds</p>
+          <h2>Installers are published through GitHub Releases</h2>
+          <p>
+            The release workflow builds Windows and macOS variants when an <code>app-v*</code> tag is pushed.
+          </p>
+        </div>
+        <a class="button" href="https://github.com/mattridley/reports-master">View repository</a>
+      </section>
+    </main>
+  </body>
+</html>

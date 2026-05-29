@@ -2,6 +2,8 @@
 
 Reports Master is a local-first Tauri + React desktop app for drafting end-of-year teacher reports.
 
+Documentation site: https://mattridley.github.io/reports-master/
+
 ## Features
 
 - Manage classes by year group, subject, and class name.
@@ -39,6 +41,23 @@ npm install
 npm run dev
 npm run tauri dev
 ```
+
+## Releases
+
+GitHub Actions builds Windows and macOS installers and publishes them to a GitHub Release.
+
+To publish a release, update the app version in `package.json` and `src-tauri/tauri.conf.json`, then push a matching tag:
+
+```bash
+git tag app-v0.1.0
+git push origin app-v0.1.0
+```
+
+You can also run the `Release desktop apps` workflow manually from the GitHub Actions tab.
+
+## Documentation site
+
+The GitHub Pages site lives in `docs/` and is published by the `Publish documentation site` workflow whenever docs change on `main`.
 
 ## CSV Templates
 
